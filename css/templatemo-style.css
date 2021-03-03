@@ -370,13 +370,13 @@ h3.profile-title {
     height: 100px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    overflow: visible;
+    overflow: hidden;
     margin-right: 30px;
   }
   .responsive-header .profile-content {
     text-align: left;
     margin-top: 30px;
-    overflow: visible;
+    overflow: hidden;
   }
 }
 
