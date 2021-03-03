@@ -353,18 +353,18 @@ h3.profile-title {
 /* RESIZE ____________________________________________________________________________________________________________________________*/
 
 @media screen and (max-width:777px) {
-  .responsive-header .main-navigation {
+  .main-navigation {
     margin-top: 10px;
     display: block;
   }
 }
 @media screen and (max-width: 777px) {
-  .responsive-header p {
+  p {
     color: white;
   }
 }
 @media screen and (max-width: 777px) {
-  .responsive-header .profile-image {
+  .profile-image {
     float: left;
     width: 100px;
     height: 100px;
