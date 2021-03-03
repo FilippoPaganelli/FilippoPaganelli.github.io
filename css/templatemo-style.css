@@ -326,6 +326,7 @@ h3.profile-title {
 }
 .main-navigation li a.active {
   background: #393d44;
+  text-transform: uppercase;
 }
 
 .social-icons {
