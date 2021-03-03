@@ -328,13 +328,11 @@ h3.profile-title {
   font-size: 24px;
 }
 .main-navigation li a:hover {
-  background: #5b6878;
+  background: #393d44;
 }
 .main-navigation li a.active {
-  background: #495461;
-}
-.main-navigation li a.active:hover {
-  background: #495461;
+  background: #393d44;
+  text-transform: uppercase;
 }
 
 .social-icons {
