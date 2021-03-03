@@ -362,7 +362,7 @@ h3.profile-title {
   .sidebar-menu .main-content {
     margin-top: 10px;
     display: block;
-    display: visible;
+    text-align: left;
   }
 }
 @media screen and (max-width: 900px) {
