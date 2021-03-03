@@ -352,19 +352,19 @@ h3.profile-title {
 
 /* RESIZE ____________________________________________________________________________________________________________________________*/
 
-@media screen and (max-width:600px) {
-  .main-navigation .responsive-header{
+@media screen and (max-width:992px) {
+  .responsive-header .main-navigation{
     margin-top: 10px;
     display: block;
   }
 }
-@media screen and (max-width: 600px) {
-  p {
+@media screen and (max-width: 992px) {
+  .responsive-header p {
     color: white;
   }
 }
-@media screen and (max-width: 600px) {
-  .profile-image {
+@media screen and (max-width: 992px) {
+  .responsive-header .profile-image {
     float: left;
     width: 100px;
     height: 100px;
@@ -380,7 +380,7 @@ h3.profile-title {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .top-section {
     padding-bottom: 0;
   }
