@@ -349,13 +349,13 @@ h3.profile-title {
   background: #5f6d7e;
   text-align: center;
 }
-/*added____________________________________________________________________________________________________________________________*/
 
+/* RESIZE ____________________________________________________________________________________________________________________________*/
 
 @media screen and (max-width: 992px) {
   .responsive-header .main-navigation {
     margin-top: 10px;
-    /*display: none;*/
+    display: block;
   }
 }
 @media screen and (max-width: 992px) {
@@ -415,15 +415,6 @@ h3.profile-title {
  4. Main Content
 -------------------------------------------------------- */
 /*------ banner ------ */
-.banner-bg {
-  padding: 260px 80px;
-  position: relative;
-  background: url("../img/7.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 2;
-}
 
 .banner-overlay {
   position: absolute;
