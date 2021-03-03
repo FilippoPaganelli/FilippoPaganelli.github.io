@@ -352,18 +352,18 @@ h3.profile-title {
 
 /* RESIZE ____________________________________________________________________________________________________________________________*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:777px) {
   .responsive-header .main-navigation {
     margin-top: 10px;
     display: block;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 777px) {
   .responsive-header p {
     color: white;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 777px) {
   .responsive-header .profile-image {
     float: left;
     width: 100px;
@@ -380,13 +380,13 @@ h3.profile-title {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 777px) {
   .top-section {
     padding-bottom: 0;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 777px) {
   .main-navigation a {
     padding: 10px;
   }
@@ -397,6 +397,8 @@ h3.profile-title {
     background: #5f6d7e !important;
   }
 }
+
+/* RESIZE ____________________________________________________________________________________________________________________________*/
 
 .toggle-menu {
   width: 100%;
