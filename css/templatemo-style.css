@@ -349,10 +349,20 @@ h3.profile-title {
   background: #5f6d7e;
   text-align: center;
 }
+/*added*/
+@media screen and (max-width: 767px) {
+	.templatemo-logo, .templatemo-container { display: block; }
+	.logo-left-container, .logo-right-container, .left-container, .right-container {
+		margin-top: 30px;
+		display: block;
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 992px) {
   .responsive-header .main-navigation {
     margin-top: 10px;
-    
+    display: none;
   }
 }
 @media screen and (max-width: 992px) {
@@ -533,16 +543,3 @@ h3.profile-title {
   border: 0;
 }
 
-/*---------------------------------------------------------
- 5. Footer
--------------------------------------------------------- */
-#footer p.copyright-text {
-  margin: 40px 0;
-  font-size: 13px;
-}
-#footer p.copyright-text a {
-  color: #5f6d7e;
-}
-#footer p.copyright-text a:hover {
-  color: #6cc0f7;
-}
