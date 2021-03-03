@@ -353,7 +353,7 @@ h3.profile-title {
 /* RESIZE ____________________________________________________________________________________________________________________________*/
 
 @media screen and (max-width:600px) {
-  .main-navigation {
+  .main-navigation .responsive-header{
     margin-top: 10px;
     display: block;
   }
