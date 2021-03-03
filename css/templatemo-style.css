@@ -349,20 +349,13 @@ h3.profile-title {
   background: #5f6d7e;
   text-align: center;
 }
-/*added*/
-@media screen and (max-width: 767px) {
-	.templatemo-logo, .templatemo-container { display: block; }
-	.logo-left-container, .logo-right-container, .left-container, .right-container {
-		margin-top: 30px;
-		display: block;
-		width: 100%;
-	}
-}
+/*added____________________________________________________________________________________________________________________________*/
+
 
 @media screen and (max-width: 992px) {
   .responsive-header .main-navigation {
     margin-top: 10px;
-    display: none;
+    /*display: none;*/
   }
 }
 @media screen and (max-width: 992px) {
