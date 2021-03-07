@@ -15,7 +15,7 @@
              margin: 0;
              padding: 0;
              position: relative;
-             transition: all 0.8s linear;
+             transition: all 0.6s ease-in-out;
              top: 0
          }
          
@@ -34,7 +34,6 @@
              margin: 20px 60px 60px;
              position: relative;
              padding: 10px 20px;
-             /*background: rgba(100, 94, 179, 0.3);*/
              background-color: rgba(128, 128, 128, 0.082);
              color: rgb(0, 0, 0);
              border-radius: 7px;
