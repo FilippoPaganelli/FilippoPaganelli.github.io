@@ -330,7 +330,6 @@ h5 {
 
 .content-wrapper {
     padding: 0 80px;
-    scroll-behavior: auto;
 }
 
 @media screen and (max-width: 992px) {
