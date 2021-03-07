@@ -39,7 +39,7 @@
              color: rgb(0, 0, 0);
              border-radius: 7px;
              line-height: 25px;
-             width: 75%
+             width: 80%
          }
          
          .box ul li>span {
@@ -71,7 +71,7 @@
          }
          
          .box ul li>span:after {
-             top: 95%
+             top: 100%
          }
          
          .box .title {
