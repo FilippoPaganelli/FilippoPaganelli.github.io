@@ -496,6 +496,8 @@ h3.profile-title {
     }
 }
 
+
+/*
 @media screen and (max-width: 600px) {
     .main-navigation a {
         padding: 10px;
@@ -507,6 +509,7 @@ h3.profile-title {
         background: #5f6d7e !important;
     }
 }
+*/
 
 
 /* RESIZE ____________________________________________________________________________________________________________________________*/
