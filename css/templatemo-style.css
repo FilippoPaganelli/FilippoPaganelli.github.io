@@ -287,7 +287,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: #555555;
+    color: #5572d1;
 }
 
 ::-webkit-input-placeholder {
@@ -416,7 +416,7 @@ h3.profile-title {
     padding: 15px 40px;
     display: block;
     color: white;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .main-navigation li a i {
@@ -425,12 +425,12 @@ h3.profile-title {
 }
 
 .main-navigation li a:hover {
-    background: #393d44;
+    background: #1d3664;
 }
 
 .main-navigation li a.active {
-    background: #393d44;
-    text-transform: uppercase;
+    background: #081a3a;
+    text-transform: initial;
 }
 
 .social-icons {

@@ -1,83 +1,96 @@
-    ul.timeline li {
-        position: relative;
-        height: 3em;
-        color: #888;
-    }
-    
-    ul.timeline li:before {
-        content: "";
-        display: inline-block;
-        height: 3em;
-        width: 2px;
-        background: rgba(150, 149, 149, 0.667);
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        left: -12px;
-        top: -0.4em;
-        z-index: -1;
-    }
-    
-    ul.timeline:before {
-        content: "●";
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        left: -1.08em;
-        top: 0.2em;
-        color: #aaa;
-    }
-    
-    ul.timeline:after {
-        content: "●";
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        left: -1.05em;
-        top: -1.2em;
-        color: #aaa;
-    }
-    /* ----- */
-    
-    .tm-row-home {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-    @media (max-width: 1200px) {
-        .tm-col-home {
-            flex: 0 0 100%;
-            max-width: 100%;
-            padding-right: 15px;
-        }
-    }
-    
-    .tm-col-home-l {
-        width: calc(100%);
-    }
-    
-    @media (max-width: 1600px) {
-        .tm-col-home-l {
-            width: calc(100%);
-        }
-        .tm-img-home-container {
-            width: 200px;
-            height: 400px;
-        }
-    }
-    
-    .date-badge {
-        display: inline-block;
-        min-width: 10px;
-        padding: 6px 10px;
-        font-size: 15px;
-        line-height: 1;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        background-color: rgba(62, 58, 121, 0.719);
-        border-radius: 20px;
-    }
+         /* ----- */
+         
+         .box {
+             margin: 0 0%;
+             height: 630px;
+             overflow: hidden;
+             padding: 0px 0 0px 60px;
+         }
+         
+         .box ul {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+             position: relative;
+             transition: all 0.5s linear;
+             top: 0
+         }
+         
+         .box ul:before {
+             content: "";
+             display: block;
+             width: 0;
+             height: 100%;
+             border: 1px dashed rgb(9, 23, 148);
+             position: absolute;
+             top: 0;
+             left: 30px
+         }
+         
+         .box ul li {
+             margin: 20px 60px 60px;
+             position: relative;
+             padding: 10px 20px;
+             /*background: rgba(100, 94, 179, 0.3);*/
+             background-color: rgba(128, 128, 128, 0.082);
+             color: rgb(0, 0, 0);
+             border-radius: 7px;
+             line-height: 25px;
+             width: 75%
+         }
+         
+         .box ul li>span {
+             content: "";
+             display: block;
+             width: 0;
+             height: 100%;
+             border: 1px solid rgb(9, 23, 148);
+             position: absolute;
+             top: 0;
+             left: -30px
+         }
+         /* PALLINO: */
+         
+         .box ul li>span:before,
+         .box ul li>span:after {
+             content: "";
+             display: block;
+             width: 10px;
+             height: 10px;
+             border-radius: 50%;
+             background: #88a1f1;
+             position: absolute;
+             left: -5.5px
+         }
+         
+         .box ul li>span:before {
+             top: -10px
+         }
+         
+         .box ul li>span:after {
+             top: 95%
+         }
+         
+         .box .title {
+             font-weight: 600;
+             margin-bottom: 5px
+         }
+         
+         .box .name {
+             margin-top: 10px;
+             font-style: italic;
+             text-align: right;
+             margin-right: 15px
+         }
+         
+         .box .time span {
+             position: absolute;
+             left: -100px;
+             color: rgb(9, 23, 148);
+             font-size: 80%;
+             font-weight: lighter;
+         }
+         
+         .box .time span:first-child {
+             top: -16px
+         }
