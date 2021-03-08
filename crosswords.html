@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- 
+    Volton template I used as a base for this website:
+    http://www.templatemo.com/tm-441-volton
+
+    CSS template I used as a base for my timeline in education.html
+    https://codepen.io/mo7amedk7alid29
+-->
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Filippo Paganelli</title>
+    <meta name="description" content="Filippo Paganelli's website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/crossword.js"></script>
+</head>
+
+<body>
+
+    <div class="responsive-header visible-xs visible-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-section">
+                        <div class="profile-image">
+                            <img src="img/profile.jpg" alt="profile_pic">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-title">Filippo Paganelli</h3>
+                            <p class="profile-description">student @ The University of Bologna</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-navigation responsive-menu">
+                <ul class="navigation">
+                    <li><a href="index.html"><i class="fa fa-user"></i>Short bio</a></li>
+                    <li><a href="education.html"><i class="fa fa-book"></i>Education</a></li>
+                    <li><a href="projects.html" class="active"><i class="fa fa-gear"></i>Projects</a></li>
+                    <li><a href="contacts.html"><i class="fa fa-link"></i>Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm">
+        <div class="top-section">
+            <div class="profile-image">
+                <img src="img/profile.jpg" alt="profile_pic">
+            </div>
+            <h3 class="profile-title">Filippo Paganelli</h3>
+            <p class="profile-description">student @ The University of Bologna</p>
+        </div>
+        <!-- top-section -->
+        <div class="main-navigation">
+            <ul class="navigation">
+                <li><a href="index.html"><i class="fa fa-user"></i>Short bio</a></li>
+                <li><a href="education.html"><i class="fa fa-book"></i>Education</a></li>
+                <li><a href="projects.html" class="active"><i class="fa fa-gear"></i>Projects</a></li>
+                <li><a href="contacts.html"><i class="fa fa-link"></i>Contacts</a></li>
+            </ul>
+        </div>
+        <!-- .main-navigation -->
+
+    </div>
+    <!-- .sidebar-menu -->
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="fluid-container">
+
+            <div class="content-wrapper">
+
+                <!-- PROJECTS-->
+                <div class="page-section" id="education">
+                    <div class="row">
+                        <div class="col-md-10" style="vertical-align: middle;">
+                            <h4 class="widget-title">Some of My Projects</h4>
+                            <button id="play_btn" class="btn btn-primary">Play</button>
+                            <button id="stop_btn" class="btn btn-primary">Stop</button>
+                            <hr style="visibility: hidden;">
+
+
+                            <div id="crossword" class="square">
+
+                            </div>
+
+
+                            <!--<div class="hidden-xs hidden-sm">
+                                <hr style="width: 100%; ">
+                            </div>
+                            <div class="visible-xs visible-sm">
+                                <hr style="width: 75%;">
+                            </div>-->
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
