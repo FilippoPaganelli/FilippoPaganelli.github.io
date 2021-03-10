@@ -100,15 +100,6 @@
          }
          /* CROSSWORDS */
          
-         .table-mobile {
-             border: 5px solid #88a1f1;
-             text-align: center;
-             width: 70vw;
-             height: 70vw;
-             margin: auto;
-             border-collapse: collapse;
-         }
-         
          .table-browser {
              border: 5px ridge #337ab7;
              width: 25vw;
@@ -116,6 +107,18 @@
              margin: auto;
              border-collapse: collapse;
              table-layout: fixed;
+         }
+         
+         @media screen and (max-width: 992px) {
+             .table-browser {
+                 border: 5px ridge #337ab7;
+                 text-align: center;
+                 width: 70vw;
+                 height: 70vw;
+                 margin: auto;
+                 border-collapse: collapse;
+                 table-layout: fixed;
+             }
          }
          
          .cream {
