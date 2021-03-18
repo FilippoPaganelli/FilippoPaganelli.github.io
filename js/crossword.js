@@ -2,16 +2,6 @@ const ROWS = 11
 const COLS = 10
 
 $(function() {
-    //$("#crossword").hide()
-
-    $("#play_btn").click(function() {
-        $("#crossword").show()
-    })
-
-    $("#stop_btn").click(function() {
-        $("#crossword").hide()
-    })
-
     make_board()
 });
 
@@ -52,6 +42,15 @@ cellHandler = function(index) {
     }
 }
 
-move = function() {
+checkLetters = function() {
 
+}
+
+resetBoard = function() {
+    $(":input").val('')
+    var index = 0
+    while ($('#' + index).hasClass('gray')) {
+        index = (index + 1) % 110
+    }
+    $("#" + index).focus()
 }
