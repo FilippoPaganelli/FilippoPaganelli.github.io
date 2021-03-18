@@ -123,13 +123,12 @@
     border-color: #3379b7cc;
     text-transform: capitalize;
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
     height: 2.5vw;
     width: 2.5vw;
 }
 
 .cream {
-    /*background-color: rgba(236, 236, 230, 0.726);*/
     padding: 0;
     margin: auto;
     text-align: center;
@@ -169,7 +168,6 @@
         width: 7.5vw;
     }
     .cream {
-        /*background-color: rgba(236, 236, 230, 0.726);*/
         padding: 0;
         margin: auto;
         text-align: center;
