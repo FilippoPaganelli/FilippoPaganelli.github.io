@@ -149,7 +149,13 @@
 .cell-number {
     font-size: x-small;
     font-weight: lighter;
-    vertical-align: super;
+    vertical-align: top;
+    line-height: 0;
+    height: 0;
+    width: 0;
+    display: table-header-group;
+    padding: 0;
+    text-align: left;
 }
 
 @media screen and (max-width: 1000px) {

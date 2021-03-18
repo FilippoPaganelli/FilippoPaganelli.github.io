@@ -10,21 +10,42 @@ $(function() {
 });
 
 make_board = function() {
+    var title = ''
+    var cell_html = ''
     for (var i = 0; i < COLS; i++) {
         $("#crossword").append('<tr id="' + 'row_' + i + '"></tr>')
         for (var j = 0; j < ROWS; j++) {
 
             var index = i * ROWS + j
             var sol = solutions[index].letter
+            var num = solutions[index].number
 
             if (sol == '-') {
                 $("#row_" + i).append('<td class="gray" id="' + index + '"></td>')
                 black_tiles++
             } else {
-                $("#row_" + i).append('<td id="td_' + index + '" class="cream">' +
+                /*var cell_html = '<td id="td_' + index + '" class="cream">' +
                     '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell" type="text"/>' +
-                    '<sup class="cell-number"></sup></td>')
+                    '<sup class="cell-number">'
+                if (num !== '-') {
+                    cell_html += num
+                }
+
+                $("#row_" + i).append(cell_html + '</sup></td>')*/
+
+                cell_html = '<td id="td_' + index + '" class="cream">'
+                title = ''
+
+                if (num !== '-') {
+                    title = num
+                }
+
+                cell_html += '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
+                    '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
+                'type="text"/>'
+
+                $("#row_" + i).append(cell_html + '</td>')
             }
         }
     }
