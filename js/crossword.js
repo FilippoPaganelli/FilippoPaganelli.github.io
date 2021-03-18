@@ -25,14 +25,33 @@ make_board = function() {
 
             if (sol == '-')
                 $("#row_" + i).append('<td class="gray" id="' + index + '"></td>')
-            else
-                $("#row_" + i).append('<td onclick="tdClick(' + index + ')" id="' + index + '" class="cream">' +
-                    '<input maxlength="1" class="input-cell"/>' +
+            else {
+                $("#row_" + i).append('<td id="td_' + index + '" class="cream">' +
+                    '<input onkeyup="cellHandler(' + index + ')" id="' + index + '" maxlength="1" class="input-cell" type="text"/>' +
                     '<sup class="cell-number"></sup></td>')
+                $("#" + index).on("keyup", cellHandler(index))
+            }
         }
     }
 }
 
-tdClick = function(index) {
-    //alert(index)
+cellHandler = function(index) {
+    var cell = document.getElementById(index)
+    var value = cell.value
+
+    if (value === ' ' || value.length === 0) {
+        cell.value = ''
+    } else {
+        var next = (index + 1) % 110
+
+        while ($('#' + next).hasClass('gray')) {
+            next = (next + 1) % 110
+        }
+
+        $('#' + next).focus()
+    }
+}
+
+move = function() {
+
 }
