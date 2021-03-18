@@ -1,148 +1,197 @@
-         /* ----- 
+/* ----- 
          CSS template I used as a base for my timeline in education.html
          https://codepen.io/mo7amedk7alid29
          */
-         
-         .box {
-             margin: 0 0%;
-             height: 100%;
-             overflow: hidden;
-             padding: 0px 0 0px 60px;
-         }
-         
-         .box ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-             position: relative;
-             transition: all 0.6s ease-in-out;
-             top: 0
-         }
-         
-         .box ul:before {
-             content: "";
-             display: block;
-             width: 0;
-             height: 100%;
-             border: 1px dashed rgb(9, 23, 148);
-             position: absolute;
-             top: 0;
-             left: 30px
-         }
-         
-         .box ul li {
-             margin: 20px 60px 60px;
-             position: relative;
-             padding: 10px 20px;
-             background-color: rgba(128, 128, 128, 0.082);
-             color: rgb(0, 0, 0);
-             border-radius: 7px;
-             line-height: 25px;
-             width: 80%
-         }
-         
-         .box ul li>span {
-             content: "";
-             display: block;
-             width: 0;
-             height: 100%;
-             border: 1px solid rgb(9, 23, 148);
-             position: absolute;
-             top: 0;
-             left: -30px
-         }
-         /* PALLINO: */
-         
-         .box ul li>span:before,
-         .box ul li>span:after {
-             content: "";
-             display: block;
-             width: 10px;
-             height: 10px;
-             border-radius: 50%;
-             background: #88a1f1;
-             position: absolute;
-             left: -5.5px
-         }
-         
-         .box ul li>span:before {
-             top: -10px
-         }
-         
-         .box ul li>span:after {
-             top: 100%
-         }
-         
-         .box .title {
-             font-weight: bolder;
-             margin-bottom: 15px;
-             font-size: larger;
-             color: rgb(9, 23, 148);
-         }
-         
-         .box .name {
-             margin-top: 10px;
-             font-style: italic;
-             text-align: right;
-             margin-right: 15px
-         }
-         
-         .box .time span {
-             position: absolute;
-             left: -100px;
-             color: rgb(9, 23, 148);
-             font-size: 90%;
-             font-weight: lighter;
-         }
-         
-         .box .time span:first-child {
-             top: -16px
-         }
-         /* CROSSWORDS */
-         
-         .table-browser {
-             border: 5px ridge #337ab7;
-             width: 25vw;
-             height: 25vw;
-             margin: auto;
-             border-collapse: collapse;
-             table-layout: fixed;
-         }
-         
-         @media screen and (max-width: 992px) {
-             .table-browser {
-                 border: 5px ridge #337ab7;
-                 text-align: center;
-                 width: 70vw;
-                 height: 70vw;
-                 margin: auto;
-                 border-collapse: collapse;
-                 table-layout: fixed;
-             }
-         }
-         
-         .cream {
-             background-color: rgba(236, 236, 230, 0.726);
-             padding: 0;
-             margin: auto;
-             text-align: center;
-             vertical-align: middle;
-             border: 4px ridge;
-             border-color: #337ab7;
-             text-transform: capitalize;
-             font-weight: bold;
-             font-size: medium;
-             height: 10%;
-         }
-         
-         .gray {
-             background-color: rgb(27, 27, 27);
-             padding: 0;
-             margin: auto;
-         }
-         
-         .cell-number {
-             font-size: x-small;
-             font-weight: lighter;
-             vertical-align: super;
-         }
+
+.box {
+    margin: 0 0%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0px 0 0px 60px;
+}
+
+.box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+    top: 0
+}
+
+.box ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px dashed rgb(9, 23, 148);
+    position: absolute;
+    top: 0;
+    left: 30px
+}
+
+.box ul li {
+    margin: 20px 60px 60px;
+    position: relative;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.082);
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    line-height: 25px;
+    width: 80%
+}
+
+.box ul li>span {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid rgb(9, 23, 148);
+    position: absolute;
+    top: 0;
+    left: -30px
+}
+
+
+/* PALLINO: */
+
+.box ul li>span:before,
+.box ul li>span:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #88a1f1;
+    position: absolute;
+    left: -5.5px
+}
+
+.box ul li>span:before {
+    top: -10px
+}
+
+.box ul li>span:after {
+    top: 100%
+}
+
+.box .title {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-size: larger;
+    color: rgb(9, 23, 148);
+}
+
+.box .name {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: right;
+    margin-right: 15px
+}
+
+.box .time span {
+    position: absolute;
+    left: -100px;
+    color: rgb(9, 23, 148);
+    font-size: 90%;
+    font-weight: lighter;
+}
+
+.box .time span:first-child {
+    top: -16px
+}
+
+
+/* CROSSWORDS */
+
+.table-browser {
+    border: 5px ridge #337ab7;
+    width: 25vw;
+    height: 25vw;
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.input-cell {
+    background-color: rgba(236, 236, 230, 0.726);
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 4px ridge;
+    border-color: #337ab7;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: medium;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+.cream {
+    /*background-color: rgba(236, 236, 230, 0.726);*/
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+.gray {
+    background-color: rgb(27, 27, 27);
+    padding: 0;
+    margin: auto;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+.cell-number {
+    font-size: x-small;
+    font-weight: lighter;
+    vertical-align: super;
+}
+
+@media screen and (max-width: 1000px) {
+    .table-browser {
+        border: 5px ridge #337ab7;
+        width: 70vw;
+        height: 70vw;
+        margin: auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    .gray {
+        background-color: rgb(27, 27, 27);
+        padding: 0;
+        margin: auto;
+        height: 7.5vw;
+        width: 7.5vw;
+    }
+    .cream {
+        /*background-color: rgba(236, 236, 230, 0.726);*/
+        padding: 0;
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        height: 7.5vw;
+        width: 7.5vw;
+    }
+    .input-cell {
+        background-color: rgba(236, 230, 236, 0.726);
+        padding: 0;
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        border: 4px ridge;
+        border-color: #337ab7;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: medium;
+        height: 7.5vw;
+        width: 7.5vw;
+    }
+}
+
+
+/**/
