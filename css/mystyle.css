@@ -105,12 +105,12 @@
 /* CROSSWORDS */
 
 .table-browser {
-    border: 5px ridge #337ab7;
+    border: 4px ridge #337ab7;
     width: 25vw;
     height: 25vw;
     margin: auto;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .input-cell {
@@ -154,12 +154,12 @@
 
 @media screen and (max-width: 1000px) {
     .table-browser {
-        border: 5px ridge #337ab7;
+        border: 4px ridge #337ab7;
         width: 70vw;
         height: 70vw;
         margin: auto;
         border-collapse: collapse;
-        table-layout: fixed;
+        table-layout: auto;
     }
     .gray {
         background-color: rgb(27, 27, 27);
