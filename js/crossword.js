@@ -6,6 +6,7 @@ var toWin = 0
 
 $(function() {
     make_board()
+    make_clues(9)
 });
 
 make_board = function() {
@@ -28,6 +29,11 @@ make_board = function() {
         }
     }
     toWin = COLS * ROWS - black_tiles
+    $("#remaing_letters").text(toWin)
+}
+
+make_clues = function() {
+
 }
 
 cellHandler = function(index) {
@@ -56,6 +62,7 @@ selectCell = function(index) {
 
 checkLetters = function() {
     var correct = ''
+    guessed = 0
     for (var index = 0; index < 110; index++) {
         var letter = document.getElementById(index).value
         if (letter !== undefined && letter.length !== 0) {
@@ -68,10 +75,12 @@ checkLetters = function() {
             $(":input").css({ 'color': 'green' })
             alert('Well done!\n\nYou completed this crossword.')
         }
+        $("#remaing_letters").text(toWin - guessed)
     }
 }
 
 resetBoard = function() {
+    $("#remaing_letters").text(toWin)
     $(":input").val('')
     $(":input").removeAttr('style')
     var index = 0
