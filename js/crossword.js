@@ -6,7 +6,6 @@ var toWin = 0
 
 $(function() {
     make_board()
-    make_clues(9)
 });
 
 make_board = function() {
@@ -41,9 +40,9 @@ make_board = function() {
                     title = num
                 }
 
-                cell_html += '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
+                cell_html += '<div onmouseover="setClue(' + index + ')" onclick="setClue(' + index + ')"><input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
-                'type="text"/>'
+                'type="text"/></div>'
 
                 $("#row_" + i).append(cell_html + '</td>')
             }
@@ -53,8 +52,8 @@ make_board = function() {
     $("#remaing_letters").text(toWin)
 }
 
-make_clues = function() {
-
+setClue = function(index) {
+    $("#clue_span").text('this is cell: ' + index)
 }
 
 cellHandler = function(index) {

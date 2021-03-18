@@ -129,6 +129,10 @@
     width: 2.5vw;
 }
 
+.clue {
+    color: rebeccapurple;
+}
+
 .cream {
     padding: 0;
     margin: auto;
