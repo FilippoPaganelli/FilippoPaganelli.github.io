@@ -23,16 +23,6 @@ make_board = function() {
                 $("#row_" + i).append('<td class="gray" id="' + index + '"></td>')
                 black_tiles++
             } else {
-                /*var cell_html = '<td id="td_' + index + '" class="cream">' +
-                    '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
-                    '" maxlength="1" class="input-cell" type="text"/>' +
-                    '<sup class="cell-number">'
-                if (num !== '-') {
-                    cell_html += num
-                }
-
-                $("#row_" + i).append(cell_html + '</sup></td>')*/
-
                 cell_html = '<td id="td_' + index + '" class="cream">'
                 title = ''
 

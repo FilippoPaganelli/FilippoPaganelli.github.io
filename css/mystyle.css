@@ -129,10 +129,6 @@
     width: 2.5vw;
 }
 
-.clue {
-    color: rebeccapurple;
-}
-
 .cream {
     padding: 0;
     margin: auto;
@@ -157,7 +153,6 @@
     line-height: 0;
     height: 0;
     width: 0;
-    display: table-header-group;
     padding: 0;
     text-align: left;
 }
