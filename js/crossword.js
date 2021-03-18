@@ -1,5 +1,8 @@
 const ROWS = 11
 const COLS = 10
+var black_tiles = 0
+var guessed = 0
+var toWin = 0
 
 $(function() {
     make_board()
@@ -13,17 +16,18 @@ make_board = function() {
             var index = i * ROWS + j
             var sol = solutions[index].letter
 
-            if (sol == '-')
+            if (sol == '-') {
                 $("#row_" + i).append('<td class="gray" id="' + index + '"></td>')
-            else {
+                black_tiles++
+            } else {
                 $("#row_" + i).append('<td id="td_' + index + '" class="cream">' +
-                        '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
-                        '" maxlength="1" class="input-cell" type="text"/>' +
-                        '<sup class="cell-number"></sup></td>')
-                    //$("#" + index).on("focus", selectCell(index))
+                    '<input onkeyup="cellHandler(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
+                    '" maxlength="1" class="input-cell" type="text"/>' +
+                    '<sup class="cell-number"></sup></td>')
             }
         }
     }
+    toWin = COLS * ROWS - black_tiles
 }
 
 cellHandler = function(index) {
@@ -58,7 +62,11 @@ checkLetters = function() {
             correct = solutions[index].letter
             if (letter !== correct) {
                 $("#" + index).css({ 'color': 'red' })
-            }
+            } else guessed++
+        }
+        if (guessed === toWin) {
+            $(":input").css({ 'color': 'green' })
+            alert('Well done!\n\nYou completed this crossword.')
         }
     }
 }

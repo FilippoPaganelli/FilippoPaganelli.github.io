@@ -114,6 +114,7 @@
 }
 
 .input-cell {
+    color: rgb(27, 27, 27);
     background-color: rgba(236, 236, 230, 0.726);
     padding: 0;
     margin: auto;
@@ -176,6 +177,7 @@
         width: 7.5vw;
     }
     .input-cell {
+        color: rgb(27, 27, 27);
         background-color: rgba(236, 230, 236, 0.726);
         padding: 0;
         margin: auto;
