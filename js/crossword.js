@@ -81,7 +81,8 @@ checkLetters = function() {
             correct = solutions[index].letter
             if (letter.toLowerCase() !== correct) {
                 $("#" + index).css({ 'color': 'red' })
-            } else guessed++
+                alert(letter + '-' + correct)
+            } else guessed++;
         }
         if (guessed === toWin) {
             $(":input").css({ 'color': 'green' })
