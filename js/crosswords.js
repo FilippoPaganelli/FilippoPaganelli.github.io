@@ -38,7 +38,7 @@ make_board = function() {
                     title = num
                 }
 
-                cell_html += '<div onclick="setClue(' + index + ')"><input onkeyup="focusNextCell(' + index + ')" onfocus="focusedCell(' + index + ')" id="' + index +
+                cell_html += '<div onclick="clickedCell(' + index + ')"><input onkeyup="focusNextCell(' + index + ')" onfocus="focusedCell(' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
                 'type="text"/></div>'
 
@@ -51,7 +51,7 @@ make_board = function() {
     setDefaultClues()
 }
 
-setClue = function(index) {
+clickedCell = function(index) {
     var num = solutions[index].number // clue number or '-' for no clue
 
     if (num !== '-') { // gets the right clue if there's one
@@ -68,9 +68,7 @@ focusedCell = function(index) {
         document.getElementById(index).select()
         $("#" + index).removeAttr('style')
     }
-    if (clueing && (solutions[index].number !== '-')) {
-        writeClue(solutions[index].number)
-    }
+    clickedCell(index)
 }
 
 writeClue = function(num) {
