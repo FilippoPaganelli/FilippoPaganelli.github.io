@@ -4,6 +4,7 @@ const DEFAULT_CLUE = '< click on a cell to show clue >'
 var black_tiles = 0
 var guessed = 0
 var toWin = 0
+var clueing = false
 
 $(function() {
     document.onclick = function() {
@@ -37,7 +38,7 @@ make_board = function() {
                     title = num
                 }
 
-                cell_html += '<div  onclick="setClue(' + index + ')"><input onkeyup="focusNextCell(' + index + ')" onfocus="selectCell(' + index + ')" id="' + index +
+                cell_html += '<div onclick="setClue(' + index + ')"><input onkeyup="focusNextCell(' + index + ')" onfocus="focusedCell(' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
                 'type="text"/></div>'
 
@@ -52,26 +53,42 @@ make_board = function() {
 
 setClue = function(index) {
     var num = solutions[index].number // clue number or '-' for no clue
-    var clue = ''
-    $("#clue_span_v").text('---')
-    $("#clue_span_h").text('---')
 
     if (num !== '-') { // gets the right clue if there's one
-        var elem = clues.find(obj => { return obj.number === num })
-
-        if (elem.v_clue !== '-') {
-            clue = elem.v_clue
-            $("#clue_span_v").text(clue)
-        }
-        if (elem.h_clue !== '-') {
-            clue = elem.h_clue
-            $("#clue_span_h").text(clue)
-        }
+        clueing = true
+        writeClue(num)
     } else {
+        clueing = false
         setDefaultClues()
     }
 }
 
+focusedCell = function(index) {
+    if ($("#" + index).val() !== undefined && $("#" + index) !== '') {
+        document.getElementById(index).select()
+        $("#" + index).removeAttr('style')
+    }
+    if (clueing && (solutions[index].number !== '-')) {
+        writeClue(solutions[index].number)
+    }
+}
+
+writeClue = function(num) {
+    var elem = clues.find(obj => { return obj.number === num })
+    var clue = ''
+
+    $("#clue_span_v").text('- - -')
+    $("#clue_span_h").text('- - -')
+
+    if (elem.v_clue !== '-') {
+        clue = elem.v_clue
+        $("#clue_span_v").text(clue)
+    }
+    if (elem.h_clue !== '-') {
+        clue = elem.h_clue
+        $("#clue_span_h").text(clue)
+    }
+}
 
 setDefaultClues = function() {
     //$("#clue_span_v").css({ 'font-style': 'italic' })
@@ -94,13 +111,6 @@ focusNextCell = function(index) {
         }
 
         $('#' + next).focus()
-    }
-}
-
-selectCell = function(index) {
-    if ($("#" + index).val() !== undefined && $("#" + index) !== '') {
-        document.getElementById(index).select()
-        $("#" + index).removeAttr('style')
     }
 }
 
