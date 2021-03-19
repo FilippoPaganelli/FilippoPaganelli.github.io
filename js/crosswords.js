@@ -45,7 +45,7 @@ make_board = function() {
 }
 
 setClue = function(index) {
-    $("#clue_span").text('this is cell: ' + index)
+    $("#clue_span").text('cell ' + index)
 }
 
 cellHandler = function(index) {
