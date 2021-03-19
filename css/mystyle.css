@@ -129,6 +129,10 @@
     width: 2.5vw;
 }
 
+.input-cell:focus {
+    background-color: rgba(197, 197, 192, 0.726);
+}
+
 .cream {
     padding: 0;
     margin: auto;
@@ -146,7 +150,8 @@
     width: 2.5vw;
 }
 
-.cell-number {
+
+/*.cell-number {
     font-size: x-small;
     font-weight: lighter;
     vertical-align: top;
@@ -155,7 +160,7 @@
     width: 0;
     padding: 0;
     text-align: left;
-}
+}*/
 
 @media screen and (max-width: 992px) {
     .table-browser {
@@ -195,6 +200,9 @@
         font-size: medium;
         height: 7.5vw;
         width: 7.5vw;
+    }
+    .input-cell:focus {
+        background-color: rgba(197, 197, 192, 0.726);
     }
 }
 
