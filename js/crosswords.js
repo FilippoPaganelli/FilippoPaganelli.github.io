@@ -79,9 +79,8 @@ checkLetters = function() {
         var letter = document.getElementById(index).value
         if (letter !== undefined && letter.length !== 0) {
             correct = solutions[index].letter
-            if (letter.toLowerCase() !== correct) {
+            if (letter.toLowerCase() !== correct) { // for some reason it used upper case letters on mobile
                 $("#" + index).css({ 'color': 'red' })
-                alert(letter + '-' + correct)
             } else guessed++;
         }
         if (guessed === toWin) {
