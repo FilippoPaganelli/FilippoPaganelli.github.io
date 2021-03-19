@@ -68,8 +68,7 @@ cellHandler = function(index) {
 selectCell = function(index) {
     if ($("#" + index).val() !== undefined && $("#" + index) !== '') {
         document.getElementById(index).select()
-            //$("#" + index).removeAttr('style')
-        $("#" + index).css({ 'color': 'green' })
+        $("#" + index).removeAttr('style')
     }
 }
 
