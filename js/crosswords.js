@@ -6,6 +6,11 @@ var guessed = 0
 var toWin = 0
 
 $(function() {
+    document.onclick = function() {
+        if ($('*:focus').length == 0) {
+            setDefaultClues()
+        }
+    }
     make_board()
 });
 
@@ -46,32 +51,31 @@ make_board = function() {
 }
 
 setClue = function(index) {
-    var num = solutions[index].number
+    var num = solutions[index].number // clue number or '-' for no clue
     var clue = ''
     $("#clue_span_v").text('---')
     $("#clue_span_h").text('---')
 
-    if (num !== '-')
-        var elem = clues[num - 1]
+    if (num !== '-') { // gets the right clue if there's one
+        var elem = clues.find(obj => { return obj.number === num })
 
-    if (elem) { // got clues to show
-        console.log(num + ' - ' + index)
         if (elem.v_clue !== '-') {
             clue = elem.v_clue
             $("#clue_span_v").text(clue)
-        } else $("#clue_span_h").text('---')
+        }
         if (elem.h_clue !== '-') {
             clue = elem.h_clue
             $("#clue_span_h").text(clue)
-        } else $("#clue_span_v").text('---')
+        }
     } else {
         setDefaultClues()
     }
 }
 
+
 setDefaultClues = function() {
-    $("#clue_span_v").css({ 'font-style': 'italic' })
-    $("#clue_span_h").css({ 'font-style': 'italic' })
+    //$("#clue_span_v").css({ 'font-style': 'italic' })
+    //$("#clue_span_h").css({ 'font-style': 'italic' })
     $("#clue_span_v").text(DEFAULT_CLUE)
     $("#clue_span_h").text(DEFAULT_CLUE)
 }
