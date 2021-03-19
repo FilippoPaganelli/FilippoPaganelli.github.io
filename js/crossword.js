@@ -79,7 +79,7 @@ checkLetters = function() {
         var letter = document.getElementById(index).value
         if (letter !== undefined && letter.length !== 0) {
             correct = solutions[index].letter
-            if (letter !== correct) {
+            if (letter.toLowerCase() !== correct) {
                 $("#" + index).css({ 'color': 'red' })
             } else guessed++
         }
