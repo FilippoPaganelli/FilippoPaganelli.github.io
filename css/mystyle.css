@@ -150,18 +150,6 @@
     width: 2.5vw;
 }
 
-
-/*.cell-number {
-    font-size: x-small;
-    font-weight: lighter;
-    vertical-align: top;
-    line-height: 0;
-    height: 0;
-    width: 0;
-    padding: 0;
-    text-align: left;
-}*/
-
 @media screen and (max-width: 992px) {
     .table-browser {
         border: 4px ridge #337ab7;
@@ -205,6 +193,13 @@
         background-color: rgba(197, 197, 192, 0.726);
     }
 }
+
+
+/* PROJECTS */
+
+.proj-li {}
+
+.proj-ul {}
 
 
 /**/

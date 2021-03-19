@@ -1,0 +1,37 @@
+.box {
+    margin: 0 0%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+    top: 0
+}
+
+.box ul li {
+    margin: 20px 20px 60px;
+    position: relative;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.082);
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    line-height: 25px;
+    width: 80%
+}
+
+.box .title {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-size: larger;
+    color: rgb(9, 23, 148);
+}
+
+.box .link {
+    text-align: right;
+    font-weight: bold;
+}
