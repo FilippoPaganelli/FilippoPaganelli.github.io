@@ -157,7 +157,7 @@
     text-align: left;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
     .table-browser {
         border: 4px ridge #337ab7;
         width: 70vw;
