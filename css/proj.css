@@ -1,3 +1,7 @@
+/*
+    Slide-in animation from: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+*/
+
 .box {
     margin: 0 0%;
     height: 100%;
