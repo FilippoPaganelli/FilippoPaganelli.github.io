@@ -14,7 +14,7 @@ $(function() {
         }
     }
     make_board()
-    alertify.alert("Well done! You completed this crossword.", function() { alertify.message('OK') })
+    alertify.alert("Well done! You completed this crossword.", function() { /*alertify.message('OK')*/ })
 });
 
 make_board = function() {
