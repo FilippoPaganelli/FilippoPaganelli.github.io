@@ -70,19 +70,19 @@ clues = [{
     'v_clue': 'Ancona'
 }, {
     'number': 18,
-    'h_clue': 'un famoso Peter, mai cresciuto',
+    'h_clue': 'Pressione arteriosa diastolica',
     'v_clue': '-'
 }, {
     'number': 19,
     'h_clue': '-',
-    'v_clue': 'ciò che lo segue è importante'
+    'v_clue': 'fu presidente degli USA, iniziali'
 }, {
     'number': 20,
     'h_clue': 'una giornata in Campania',
     'v_clue': '-'
 }, {
     'number': 21,
-    'h_clue': 'imbattersi in qualcosa...quasi',
+    'h_clue': 'quasi intatto',
     'v_clue': '-'
 }, {
     'number': 22,
