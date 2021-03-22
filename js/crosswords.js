@@ -14,6 +14,7 @@ $(function() {
         }
     }
     make_board()
+    alertify.alert("Well done! You completed this crossword.", function() { alertify.message('OK') })
 });
 
 make_board = function() {
@@ -128,14 +129,13 @@ checkLetters = function() {
         }
         if (guessed === toWin) {
             $(":input").css({ 'color': 'green' })
-            alert('Well done!\n\nYou completed this crossword.')
+            alertify.alert("Well done!\nYou completed this crossword.", function() { alertify.message('OK') })
         }
         $("#remaing_letters").text(toWin - guessed)
     }
     if (missed === 0) {
-        //alert('There are no errors!')
-        $("#dialog").dialog()
-    }
+        alertify.notify('No errors!', 'success', 3, function() {})
+    } else alertify.notify('There are errors...', 'error', 3, function() {})
 }
 
 resetBoard = function() {
