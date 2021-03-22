@@ -3,6 +3,7 @@ const COLS = 10
 const DEFAULT_CLUE = '< click on a cell to show clue >'
 var black_tiles = 0
 var guessed = 0
+var missed = 0
 var toWin = 0
 var clueing = false
 
@@ -115,12 +116,14 @@ focusNextCell = function(index) {
 checkLetters = function() {
     var correct = ''
     guessed = 0
+    missed = 0
     for (var index = 0; index < 110; index++) {
         var letter = document.getElementById(index).value
         if (letter !== undefined && letter.length !== 0) {
             correct = solutions[index].letter
             if (letter.toLowerCase() !== correct) { // for some reason it used upper case letters on mobile
                 $("#" + index).css({ 'color': 'red' })
+                missed++
             } else guessed++;
         }
         if (guessed === toWin) {
@@ -128,6 +131,10 @@ checkLetters = function() {
             alert('Well done!\n\nYou completed this crossword.')
         }
         $("#remaing_letters").text(toWin - guessed)
+    }
+    if (missed === 0) {
+        //alert('There are no errors!')
+        $("#dialog").dialog()
     }
 }
 
