@@ -30,11 +30,11 @@
 }
 
 .input-cell::selection {
-    background: rgba(235, 212, 7, 0.904);
+    color: rgba(235, 212, 7, 0.904);
 }
 
 .input-cell::-moz-selection {
-    background: rgba(235, 212, 7, 0.904);
+    color: rgba(235, 212, 7, 0.904);
 }
 
 .cream {
