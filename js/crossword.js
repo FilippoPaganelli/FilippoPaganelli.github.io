@@ -1,5 +1,6 @@
 const ROWS = 11
 const COLS = 10
+const TOTAL_CELLS = ROWS * COLS
 const DEFAULT_CLUE = '< click on a cell to show clue >'
 var black_tiles = 0
 var guessed = 0
@@ -14,7 +15,6 @@ $(function() {
         }
     }
     make_board()
-        //alertify.alert("Well done! You completed this crossword.", function() { /*alertify.message('OK')*/ })
 });
 
 make_board = function() {
@@ -40,7 +40,8 @@ make_board = function() {
                     title = num
                 }
 
-                cell_html += '<div onclick="clickedCell(' + index + ')"><input onkeyup="focusNextCell(' + index + ')" onfocus="focusedCell(' + index + ')" id="' + index +
+                cell_html += '<div onclick="clickedCell(' + index + ')"><input onkeyup="focusNextCell(window.event, ' +
+                    index + ')" onfocus="focusedCell(' + index + ')" onkeydown="checkArrows(window.event, ' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
                 'type="text"/></div>'
 
@@ -51,6 +52,20 @@ make_board = function() {
     toWin = COLS * ROWS - black_tiles
     $("#remaing_letters").text(toWin)
     setDefaultClues()
+}
+
+checkArrows = function(e, index) {
+    var next = index
+    if (e.keyCode == '40') { // arrow down
+        var next = (index + ROWS) % TOTAL_CELLS
+    } else if (e.keyCode == '38') { // arrow up
+        var next = (index + ROWS * (COLS - 1)) % TOTAL_CELLS
+    } else if (e.keyCode == '37') { // arrow left
+        var next = (index - 1) % TOTAL_CELLS
+    } else if (e.keyCode == '39') { // arrow right
+        var next = (index + 1) % TOTAL_CELLS
+    }
+    $('#' + next).focus()
 }
 
 clickedCell = function(index) {
@@ -97,20 +112,23 @@ setDefaultClues = function() {
     $("#clue_span_h").text(DEFAULT_CLUE)
 }
 
-focusNextCell = function(index) {
+focusNextCell = function(e, index) {
     var cell = document.getElementById(index)
     var value = cell.value
+    var isArrow = e.keyCode == '40' || e.keyCode == '39' || e.keyCode == '38' || e.keyCode == '37'
 
     if (value === ' ' || value.length === 0) {
         cell.value = ''
     } else {
-        var next = (index + 1) % 110
+        if (!isArrow) {
+            var next = (index + 1) % 110
 
-        while ($('#' + next).hasClass('gray')) {
-            next = (next + 1) % 110
-        }
+            while ($('#' + next).hasClass('gray')) {
+                next = (next + 1) % 110
+            }
 
-        $('#' + next).focus()
+            $('#' + next).focus()
+        } else $('#' + index).focus()
     }
 }
 
