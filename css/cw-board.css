@@ -30,12 +30,14 @@
 }
 
 .input-cell::selection {
-    background: rgba(251, 251, 245, 0.726);
+    background: rgb(58, 58, 57);
+    color: rgb(251, 251, 249)
 }
 
-.input-cell::-moz-selection {
+
+/*.input-cell::-moz-selection {
     background: rgba(251, 251, 245, 0.726);
-}
+}*/
 
 .cream {
     padding: 0;
