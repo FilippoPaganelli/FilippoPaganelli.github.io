@@ -23,8 +23,9 @@
     padding: 0;
     position: relative;
     /*transition: ease-in 0.6s;*/
+    transform: translateX(25%);
     animation: 0.4s ease-out 0s 1 slideInFromRight;
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 
 .box ul li {
