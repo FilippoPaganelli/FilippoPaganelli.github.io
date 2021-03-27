@@ -48,7 +48,7 @@ makeBoard = function() {
                     title = num
                 }
 
-                keydownListener = isMobile ? 'onkeydown="checkArrows(window.event, ' + index + ')"' : ''
+                keydownListener = isMobile ? '' : 'onkeydown="checkArrows(window.event, ' + index + ')"'
 
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" ' + keydownListener + ' id="' + index +
