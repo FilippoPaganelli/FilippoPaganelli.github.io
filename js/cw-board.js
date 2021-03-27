@@ -104,8 +104,6 @@ focusNextCell = function(e, index) {
             while ($('#' + next).hasClass('gray')) { // finds next white cell
                 next = (next + 1) % 110
             }
-
-            alert('index: ' + index + ' - next: ' + next)
             $('#' + next).focus()
         } else $('#' + index).focus()
     }
