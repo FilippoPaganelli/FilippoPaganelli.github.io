@@ -1,4 +1,4 @@
-# This is my website, there you can find:
+## This is my website, there you can find:
 
 - a very short bio
 - my education timeline
