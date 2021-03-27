@@ -123,7 +123,7 @@ focusNextCell = function(e, index) {
         if (!isArrow) {
             var next = (index + 1) % 110
 
-            while ($('#' + next).hasClass('gray')) {
+            while ($('#' + next).hasClass('gray')) { // finds next white cell
                 next = (next + 1) % 110
             }
 
