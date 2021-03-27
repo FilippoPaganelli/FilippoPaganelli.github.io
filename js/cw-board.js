@@ -15,9 +15,7 @@ $(function() {
             setDefaultClues()
         }
     }
-alert(isMobile)
-    detectMobile()
-    alert(isMobile) 
+    detectMobile() 
     makeBoard()
 });
 
