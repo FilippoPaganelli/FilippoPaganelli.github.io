@@ -15,7 +15,9 @@ $(function() {
             setDefaultClues()
         }
     }
+alert(isMobile)
     detectMobile()
+    alert(isMobile) 
     makeBoard()
 });
 
@@ -47,7 +49,7 @@ makeBoard = function() {
                 }
 
                 keydownListener = isMobile ? 'onkeydown="checkArrows(window.event, ' + index + ')"' : ''
-                alert(isMobile)
+
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" ' + keydownListener + ' id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
