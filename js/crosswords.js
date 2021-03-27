@@ -6,7 +6,7 @@ var black_tiles = 0
 var guessed = 0
 var missed = 0
 var toWin = 0
-var clueing = false
+    //var clueing = false
 
 $(function() {
     document.onclick = function() {
@@ -40,7 +40,7 @@ make_board = function() {
                     title = num
                 }
 
-                cell_html += '<div onclick="clickedCell(' + index + ')"><input onkeyup="focusNextCell(window.event, ' +
+                cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" onkeydown="checkArrows(window.event, ' + index + ')" id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
                 'type="text"/></div>'
@@ -54,6 +54,7 @@ make_board = function() {
     setDefaultClues()
 }
 
+// --- ONKEYDOWN
 checkArrows = function(e, index) {
     var next = index
     if (e.keyCode == '40') { // arrow down
@@ -68,18 +69,42 @@ checkArrows = function(e, index) {
     $('#' + next).focus()
 }
 
+// --- ONCLICK
 clickedCell = function(index) {
     var num = solutions[index].number // clue number or '-' for no clue
 
     if (num !== '-') { // gets the right clue if there's one
-        clueing = true
+        //clueing = true
         writeClue(num)
     } else {
-        clueing = false
+        //clueing = false
         setDefaultClues()
     }
 }
 
+// --- ONKEYUP
+focusNextCell = function(e, index) {
+    var cell = document.getElementById(index)
+    var value = cell.value
+    var isArrow = e.keyCode == '40' || e.keyCode == '39' || e.keyCode == '38' || e.keyCode == '37'
+        //console.log(isArrow)
+
+    if (value === ' ' || value.length === 0) {
+        cell.value = ''
+    } else {
+        if (!isArrow) {
+            var next = (index + 1) % 110
+
+            while ($('#' + next).hasClass('gray')) { // finds next white cell
+                next = (next + 1) % 110
+            }
+
+            $('#' + next).focus()
+        } else $('#' + index).focus()
+    }
+}
+
+// --- ONFOCUS
 focusedCell = function(index) {
     if ($("#" + index).val() !== undefined && $("#" + index) !== '') {
         document.getElementById(index).select()
@@ -110,26 +135,6 @@ setDefaultClues = function() {
     //$("#clue_span_h").css({ 'font-style': 'italic' })
     $("#clue_span_v").text(DEFAULT_CLUE)
     $("#clue_span_h").text(DEFAULT_CLUE)
-}
-
-focusNextCell = function(e, index) {
-    var cell = document.getElementById(index)
-    var value = cell.value
-    var isArrow = e.keyCode == '40' || e.keyCode == '39' || e.keyCode == '38' || e.keyCode == '37'
-
-    if (value === ' ' || value.length === 0) {
-        cell.value = ''
-    } else {
-        if (!isArrow) {
-            var next = (index + 1) % 110
-
-            while ($('#' + next).hasClass('gray')) { // finds next white cell
-                next = (next + 1) % 110
-            }
-
-            $('#' + next).focus()
-        } else $('#' + index).focus()
-    }
 }
 
 checkLetters = function() {
