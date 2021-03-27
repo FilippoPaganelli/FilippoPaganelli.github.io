@@ -105,7 +105,7 @@ focusNextCell = function(e, index) {
 
 // --- ONFOCUS
 focusedCell = function(index) {
-    if ($("#" + index).val() !== undefined && $("#" + index) !== '') {
+    if ($("#" + index).val().length !== 0) {
         document.getElementById(index).select()
         $("#" + index).removeAttr('style')
     }
