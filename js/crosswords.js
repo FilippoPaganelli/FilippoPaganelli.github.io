@@ -69,7 +69,6 @@ checkArrows = function(e, index) {
     $('#' + next).focus()
 }
 
-// --- ONCLICK
 clickedCell = function(index) {
     var num = solutions[index].number // clue number or '-' for no clue
 
@@ -87,7 +86,6 @@ focusNextCell = function(e, index) {
     var cell = document.getElementById(index)
     var value = cell.value
     var isArrow = e.keyCode == '40' || e.keyCode == '39' || e.keyCode == '38' || e.keyCode == '37'
-        //console.log(isArrow)
 
     if (value === ' ' || value.length === 0) {
         cell.value = ''
@@ -99,6 +97,7 @@ focusNextCell = function(e, index) {
                 next = (next + 1) % 110
             }
 
+            alert('index: ' + index + ' - next: ' + next)
             $('#' + next).focus()
         } else $('#' + index).focus()
     }
