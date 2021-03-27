@@ -40,7 +40,8 @@ make_board = function() {
                     title = num
                 }
 
-                keydown = 'onkeydown="checkArrows(window.event, ' + index + ')"'
+                //keydown = 'onkeydown="checkArrows(window.event, ' + index + ')"'
+                keydonw = ''
 
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" ' + keydown + ' id="' + index +
