@@ -41,7 +41,7 @@ make_board = function() {
                 }
 
                 //keydown = 'onkeydown="checkArrows(window.event, ' + index + ')"'
-                keydonw = ''
+                keydown = ''
 
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" ' + keydown + ' id="' + index +
