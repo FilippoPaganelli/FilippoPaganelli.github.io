@@ -6,6 +6,7 @@ var black_tiles = 0
 var guessed = 0
 var missed = 0
 var toWin = 0
+var isMobile = false
     //var clueing = false
 
 $(function() {
@@ -14,10 +15,15 @@ $(function() {
             setDefaultClues()
         }
     }
-    make_board()
+    detectMobile()
+    makeBoard()
 });
 
-make_board = function() {
+detectMobile = function() {
+    if (window.innerWidth <= 992) isMobile = true
+}
+
+makeBoard = function() {
     var title = ''
     var cell_html = ''
     var index = 0
@@ -40,11 +46,10 @@ make_board = function() {
                     title = num
                 }
 
-                //keydown = 'onkeydown="checkArrows(window.event, ' + index + ')"'
-                keydown = ''
+                keydownListener = isMobile ? 'onkeydown="checkArrows(window.event, ' + index + ')"' : ''
 
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
-                    index + ')" onfocus="focusedCell(' + index + ')" ' + keydown + ' id="' + index +
+                    index + ')" onfocus="focusedCell(' + index + ')" ' + keydownListener + ' id="' + index +
                     '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
                 'type="text"/></div>'
 
