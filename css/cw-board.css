@@ -1,9 +1,23 @@
 /* CROSSWORDS */
 
-.table-browser {
+option {
+    background-color: rgb(70, 70, 68);
+    color: white;
+}
+
+.table-browser-1 {
     border: 4px ridge #337ab7;
     width: 25vw;
     height: 25vw;
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.table-browser-2 {
+    border: 4px ridge #337ab7;
+    width: 25vw;
+    height: 35vw;
     margin: auto;
     border-collapse: collapse;
     table-layout: auto;
@@ -56,11 +70,22 @@
     width: 2.5vw;
 }
 
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 992px) {
-    .table-browser {
+    .table-browser-1 {
         border: 4px ridge #337ab7;
         width: 70vw;
         height: 70vw;
+        margin: auto;
+        border-collapse: collapse;
+        table-layout: auto;
+    }
+    .table-browser-2 {
+        border: 4px ridge #337ab7;
+        width: 70vw;
+        height: 85vw;
         margin: auto;
         border-collapse: collapse;
         table-layout: auto;

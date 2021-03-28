@@ -1,13 +1,15 @@
-const ROWS = 11
-const COLS = 10
-const TOTAL_CELLS = ROWS * COLS
+var ROWS = 0
+var COLS = 0
+var TOTAL_CELLS = 0
 const DEFAULT_CLUE = '< click on a cell to show clue >'
+var currentOption = 'no_selection'
+var solutions = []
+var clues = []
 var black_tiles = 0
+var toWin = 0
 var guessed = 0
 var missed = 0
-var toWin = 0
 var isMobile = false
-    //var clueing = false
 
 $(function() {
     document.onclick = function() {
@@ -15,49 +17,75 @@ $(function() {
             setDefaultClues()
         }
     }
-    detectMobile() 
-    makeBoard()
+    detectMobile()
+    resetAll()
+    $("#board_selection").val('no_selection') // resets the default value
 });
 
-detectMobile = function() {
+detectMobile = function() { // same maxwidth as for CSS
     if (window.innerWidth <= 992) isMobile = true
 }
 
-makeBoard = function() {
-    var title = ''
+resetAll = function() {
+    guessed = 0
+    missed = 0
+    toWin = 0
+    black_tiles = 0
+    $('table').empty()
+    $('table').hide()
+    $("#remaing_letters").text(toWin)
+    setDefaultClues()
+}
+
+// --- ONCHANGE
+prepareSelection = function(selected) {
+    resetAll()
+    if (selected != 'no_selection') {
+        $('#' + selected).show()
+        var cw = window[selected]
+        currentOption = selected
+
+        // 1- set rows and cols
+        ROWS = cw.info.cols
+        COLS = cw.info.rows
+        TOTAL_CELLS = ROWS * COLS
+
+        // 2- set solutions and reset guessed/missed
+        solutions = cw.sol
+        clues = cw.clues
+
+        // 3- make table for selected board
+        makeBoard(selected)
+    }
+}
+
+makeBoard = function(cw_id) {
     var cell_html = ''
     var index = 0
     for (var i = 0; i < COLS; i++) {
-        $("#crossword").append('<tr id="' + 'row_' + i + '"></tr>')
+        $("#" + cw_id).append('<tr id="' + 'row_' + i + '"></tr>')
         for (var j = 0; j < ROWS; j++) {
 
             index = i * ROWS + j
-            var sol = solutions[index].letter
-            var num = solutions[index].number
+            var sol = solutions[index]
 
             if (sol == '-') {
                 $("#row_" + i).append('<td class="gray" id="' + index + '"></td>')
                 black_tiles++
             } else {
                 cell_html = '<td id="td_' + index + '" class="cream">'
-                title = ''
-
-                if (num !== '-') {
-                    title = num
-                }
 
                 keydownListener = isMobile ? '' : 'onkeydown="checkArrows(window.event, ' + index + ')"'
 
                 cell_html += '<div><input onkeyup="focusNextCell(window.event, ' +
                     index + ')" onfocus="focusedCell(' + index + ')" ' + keydownListener + ' id="' + index +
-                    '" maxlength="1" class="input-cell"' + ' title="' + title + '"'
-                'type="text"/></div>'
+                    '" maxlength="1" class="input-cell" type="text"/></div>'
 
                 $("#row_" + i).append(cell_html + '</td>')
             }
         }
     }
-    toWin = COLS * ROWS - black_tiles
+    toWin = TOTAL_CELLS - black_tiles
     $("#remaing_letters").text(toWin)
     setDefaultClues()
 }
@@ -78,15 +106,14 @@ checkArrows = function(e, index) {
 }
 
 clickedCell = function(index) {
-    var num = solutions[index].number // clue number or '-' for no clue
-
-    if (num !== '-') { // gets the right clue if there's one
-        //clueing = true
-        writeClue(num)
-    } else {
-        //clueing = false
-        setDefaultClues()
-    }
+    var found = false
+    clues.forEach(function(clue) {
+        if (clue.number === index) {
+            writeClue(index)
+            found = true
+        }
+    })
+    if (!found) setDefaultClues()
 }
 
 // --- ONKEYUP
@@ -119,7 +146,7 @@ focusedCell = function(index) {
 }
 
 writeClue = function(num) {
-    var elem = clues.find(obj => { return obj.number === num })
+    var elem = clues.find(obj => { return obj.number == num })
     var clue = ''
 
     $("#clue_span_v").text('- - -')
@@ -136,8 +163,6 @@ writeClue = function(num) {
 }
 
 setDefaultClues = function() {
-    //$("#clue_span_v").css({ 'font-style': 'italic' })
-    //$("#clue_span_h").css({ 'font-style': 'italic' })
     $("#clue_span_v").text(DEFAULT_CLUE)
     $("#clue_span_h").text(DEFAULT_CLUE)
 }
@@ -149,7 +174,7 @@ checkLetters = function() {
     for (var index = 0; index < 110; index++) {
         var letter = document.getElementById(index).value
         if (letter !== undefined && letter.length !== 0) {
-            correct = solutions[index].letter
+            correct = solutions[index]
             if (letter.toLowerCase() !== correct) { // for some reason it used upper case letters on mobile
                 $("#" + index).css({ 'color': 'red' })
                 missed++
@@ -167,6 +192,7 @@ checkLetters = function() {
 }
 
 resetBoard = function() {
+    $("#board_selection").val(currentOption)
     $("#remaing_letters").text(toWin)
     $(":input").val('')
     $(":input").removeAttr('style')

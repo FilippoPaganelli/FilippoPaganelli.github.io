@@ -95,17 +95,30 @@
                 <div class="page-section" id="crosswords ">
                     <div class="row">
                         <div class="col-md-10" style="vertical-align: middle;">
-                            <h4 class="widget-title ">Crosswords</h4>
+                            <h4 class="widget-title ">Projects / Crosswords</h4>
                             <button id="reset_btn" class="btn btn-primary" onclick="resetBoard() ">Reset</button>
                             <button id="check_btn" class="btn btn-primary" onclick="checkLetters() ">Check</button>
+
+                            <select name="board_selection" id="board_selection" style="padding: 5px;" onchange="prepareSelection(this.value)">
+                                <option value="no_selection">&lt pick one &gt</option>
+                                <option value="cw_1">1 - the first</option>
+                                <!--<option value="cw_2">2 - cinema</option>-->
+                            </select>
+
                             <!--<span style="border: ridge 4px;border-color: red;border-radius: 8px;padding: 4px; ">Work in progress!</span>-->
                             <hr style="visibility: hidden; ">
 
                             <span>Remaining letters: <span id="remaing_letters" style="font-weight: bold;font-size: medium;"></span></span><br>
                             <span>H clue: <span id="clue_span_h" style="font-weight: bold;font-size: medium; "></span></span><br>
-                            <span>V clue: <span id="clue_span_v" style="font-weight: bold;font-size: medium; "></span></span>
+                            <span>V clue: <span id="clue_span_v" style="font-weight: bold;font-size: medium; "></span></span><br>
 
-                            <table id="crossword" class="table-browser">
+
+
+                            <table id="cw_1" class="table-browser-1">
+                                <hr style="visibility: hidden; height: 0; ">
+                            </table>
+
+                            <table id="cw_2" class="table-browser-2">
                                 <hr style="visibility: hidden; height: 0; ">
                             </table>
 

@@ -1,35 +1,38 @@
-solutions = [{ "letter": "d", "number": 1 }, { "letter": "i", "number": 2 }, { "letter": "s", "number": 3 }, { "letter": "p", "number": 4 }, { "letter": "e", "number": 5 }, { "letter": "r", "number": 6 }, { "letter": "d", "number": 7 }, { "letter": "e", "number": 8 }, { "letter": "r", "number": "-" }, { "letter": "a", "number": 9 }, { "letter": "-", "number": "-" }, { "letter": "c", "number": 10 }, { "letter": "a", "number": "-" }, { "letter": "l", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "m", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "i", "number": "-" }, { "letter": "o", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "d", "number": 11 }, { "letter": "a", "number": 12 }, { "letter": "-", "number": "-" }, { "letter": "n", "number": 13 }, { "letter": "a", "number": "-" }, { "letter": "s", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "i", "number": 14 }, { "letter": "o", "number": "-" }, { "letter": "r", "number": "-" }, { "letter": "s", "number": 15 }, { "letter": "s", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "a", "number": 16 }, { "letter": "t", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "r", "number": "-" }, { "letter": "a", "number": 17 }, { "letter": "t", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "i", "number": "-" }, { "letter": "p", "number": 18 }, { "letter": "a", "number": "-" }, { "letter": "d", "number": 19 }, { "letter": "-", "number": "-" }, { "letter": "i", "number": 20 }, { "letter": "o", "number": "-" }, { "letter": "r", "number": "-" }, { "letter": "n", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "i", "number": 21 }, { "letter": "n", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "a", "number": 22 }, { "letter": "t", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "e", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "l", "number": 23 }, { "letter": "a", "number": "-" }, { "letter": "n", "number": "-" }, { "letter": "c", "number": 24 }, { "letter": "t", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "s", "number": 25 }, { "letter": "e", "number": "-" }, { "letter": "d", "number": 26 }, { "letter": "a", "number": "-" }, { "letter": "n", "number": 27 }, { "letter": "i", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "o", "number": "-" }, { "letter": "c", "number": 28 }, { "letter": "e", "number": "-" }, { "letter": "c", "number": 29 }, { "letter": "o", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "n", "number": 30 }, { "letter": "a", "number": "-" }, { "letter": "o", "number": 31 }, { "letter": "-", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "-", "number": "-" }, { "letter": "a", "number": 32 }, { "letter": "l", "number": "-" }, { "letter": "i", "number": 33 }, { "letter": "t", "number": "-" }, { "letter": "o", "number": 34 }, { "letter": "-", "number": "-" }, { "letter": "n", "number": 35 }, { "letter": "u", "number": "-" }, { "letter": "m", "number": 36 }, { "letter": "-", "number": "-" }, { "letter": "f", "number": 37 }, { "letter": "r", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "m", "number": "-" }, { "letter": "a", "number": "-" }, { "letter": "r", "number": "-" }, { "letter": "t", "number": "-" }, { "letter": "i", "number": "-" }, { "letter": "n", "number": "-" }, { "letter": "o", "number": "-" }]
+// 1 - the first
+cw_1_sol = ["d", "i", "s", "p", "e", "r", "d", "e", "r", "a", "-", "c", "a", "l", "a", "m", "a", "i", "o", "-", "d", "a", "-", "n", "a", "s", "a", "t", "a", "-", "i", "o", "r", "s", "s", "-", "a", "t", "t", "r", "a", "t", "t", "i", "p", "a", "d", "-", "i", "o", "r", "n", "a", "t", "a", "i", "n", "t", "a", "t", "-", "e", "-", "l", "a", "n", "c", "t", "-", "s", "e", "d", "a", "n", "i", "-", "o", "c", "e", "c", "o", "-", "a", "-", "n", "a", "o", "-", "a", "-", "a", "l", "i", "t", "o", "-", "n", "u", "m", "-", "f", "r", "a", "m", "a", "r", "t", "i", "n", "o"]
 
-clues = [{
-    'number': 1,
+cw_1_info = { 'rows': 10, 'cols': 11 }
+
+cw_1_clues = [{
+    'number': 0,
     'h_clue': 'sinonimo di "spargerà"',
     'v_clue': 'tipo di corrente elettrica'
 }, {
-    'number': 2,
+    'number': 1,
     'h_clue': '-',
     'v_clue': 'Christian, apprezzato doppiatore italiano'
 }, {
-    'number': 3,
+    'number': 2,
     'h_clue': '-',
     'v_clue': 'malattia degenerativa che interessa i muscoli'
 }, {
-    'number': 4,
+    'number': 3,
     'h_clue': '-',
     'v_clue': 'vi fu eretta la prima sede della Apple Computer...in breve'
 }, {
-    'number': 5,
+    'number': 4,
     'h_clue': '-',
     'v_clue': 'minerale dal colore sanguigno'
 }, {
-    'number': 6,
+    'number': 5,
     'h_clue': '-',
     'v_clue': 'brutto mammifero di piccole dimensioni'
 }, {
-    'number': 7,
+    'number': 6,
     'h_clue': '-',
     'v_clue': 'condizione fisica che disidrata'
 }, {
-    'number': 8,
+    'number': 7,
     'h_clue': '-',
     'v_clue': 'Olmi, regista de "Il mestiere delle armi"'
 }, {
@@ -37,115 +40,274 @@ clues = [{
     'h_clue': '-',
     'v_clue': 'quando non si può avere, un bambino si...'
 }, {
-    'number': 10,
+    'number': 11,
     'h_clue': 'si usava per scrivere',
     'v_clue': '-'
 }, {
-    'number': 11,
+    'number': 20,
     'h_clue': 'affermazione di Vladimir Putin',
     'v_clue': '-'
 }, {
-    'number': 12,
+    'number': 21,
     'h_clue': '-',
     'v_clue': 'l\'uomo bianco per cui Hitler simpatizzava'
 }, {
-    'number': 13,
+    'number': 23,
     'h_clue': 'in gergo: "trovata", "scovata"',
     'v_clue': '-'
 }, {
-    'number': 14,
+    'number': 30,
     'h_clue': 'la banca della Santa Sede',
     'v_clue': 'lo siamo "Noi"'
 }, {
-    'number': 15,
+    'number': 33,
     'h_clue': 'fu un corpo di polizia tedesca',
     'v_clue': 'si distingue positivamente'
 }, {
-    'number': 16,
+    'number': 36,
     'h_clue': 'lo sono due che...si piacciono',
     'v_clue': '-'
 }, {
-    'number': 17,
+    'number': 40,
     'h_clue': '-',
     'v_clue': 'Ancona'
 }, {
-    'number': 18,
+    'number': 44,
     'h_clue': 'Pressione arteriosa diastolica',
     'v_clue': '-'
 }, {
-    'number': 19,
+    'number': 46,
     'h_clue': '-',
     'v_clue': 'fu presidente degli USA, iniziali'
 }, {
-    'number': 20,
+    'number': 48,
     'h_clue': 'una giornata in Campania',
     'v_clue': '-'
 }, {
-    'number': 21,
+    'number': 55,
     'h_clue': 'quasi intatto',
     'v_clue': '-'
 }, {
-    'number': 22,
+    'number': 58,
     'h_clue': '-',
     'v_clue': 'anello di filo e comune lombardo'
 }, {
-    'number': 23,
+    'number': 63,
     'h_clue': 'un tipo di rete',
     'v_clue': '-'
 }, {
-    'number': 24,
+    'number': 66,
     'h_clue': 'lo fu Marcello Lippi',
     'v_clue': '-'
 }, {
-    'number': 25,
+    'number': 69,
     'h_clue': 'si usano per insaporire il brodo',
     'v_clue': '-'
 }, {
-    'number': 26,
+    'number': 71,
     'h_clue': '-',
     'v_clue': 'se non è "presa" è...'
 }, {
-    'number': 27,
+    'number': 73,
     'h_clue': '-',
     'v_clue': 'anonimato che deriva dal Latino'
 }, {
-    'number': 28,
+    'number': 77,
     'h_clue': 'lingua slava poco diffusa',
     'v_clue': '-'
 }, {
-    'number': 29,
+    'number': 79,
     'h_clue': '-',
     'v_clue': 'l\'automobile che usava Wiston Churchill'
 }, {
-    'number': 30,
+    'number': 84,
     'h_clue': '"no" detto a Lisbona',
     'v_clue': '-'
 }, {
-    'number': 31,
+    'number': 86,
     'h_clue': '-',
     'v_clue': '"Organizzazione dei Nazionalisti Ucraini"'
 }, {
-    'number': 32,
+    'number': 90,
     'h_clue': 'ad alcuni puzza, ad altri sa di fresco...',
     'v_clue': '-'
 }, {
-    'number': 33,
+    'number': 92,
     'h_clue': '-',
     'v_clue': '"Istituto Magistrale"'
 }, {
-    'number': 34,
+    'number': 94,
     'h_clue': '-',
     'v_clue': '"altrimenti" a Londra'
 }, {
-    'number': 35,
+    'number': 96,
     'h_clue': 'lo è "42", in breve',
     'v_clue': '-'
 }, {
-    'number': 36,
+    'number': 98,
     'h_clue': '-',
     'v_clue': 'sinonimo gergale di "adesso"'
 }, {
-    'number': 37,
+    'number': 100,
     'h_clue': 'è cantato come "campanaro"',
     'v_clue': '-'
 }]
+
+cw_1 = { 'name': '1 - the first', 'info': cw_1_info, 'sol': cw_1_sol, 'clues': cw_1_clues }
+
+// 2 - cinema
+cw_2_sol = ["d", "i", "s", "p", "e", "r", "d", "e", "r", "a", "-", "c", "a", "l", "a", "m", "a", "i", "o", "-", "d", "a", "-", "n", "a", "s", "a", "t", "a", "-", "i", "o", "r", "s", "s", "-", "a", "t", "t", "r", "a", "t", "t", "i", "p", "a", "d", "-", "i", "o", "r", "n", "a", "t", "a", "i", "n", "t", "a", "t", "-", "e", "-", "l", "a", "n", "c", "t", "-", "s", "e", "d", "a", "n", "i", "-", "o", "c", "e", "c", "o", "-", "a", "-", "n", "a", "o", "-", "a", "-", "a", "l", "i", "t", "o", "-", "n", "u", "m", "-", "f", "r", "a", "m", "a", "r", "t", "i", "n", "o"]
+
+cw_2_info = { 'rows': 10, 'cols': 11 }
+
+cw_2_clues = [{
+    'number': 0,
+    'h_clue': 'sinonimo di "spargerà"',
+    'v_clue': 'tipo di corrente elettrica'
+}, {
+    'number': 1,
+    'h_clue': '-',
+    'v_clue': 'Christian, apprezzato doppiatore italiano'
+}, {
+    'number': 2,
+    'h_clue': '-',
+    'v_clue': 'malattia degenerativa che interessa i muscoli'
+}, {
+    'number': 3,
+    'h_clue': '-',
+    'v_clue': 'vi fu eretta la prima sede della Apple Computer...in breve'
+}, {
+    'number': 4,
+    'h_clue': '-',
+    'v_clue': 'minerale dal colore sanguigno'
+}, {
+    'number': 5,
+    'h_clue': '-',
+    'v_clue': 'brutto mammifero di piccole dimensioni'
+}, {
+    'number': 6,
+    'h_clue': '-',
+    'v_clue': 'condizione fisica che disidrata'
+}, {
+    'number': 7,
+    'h_clue': '-',
+    'v_clue': 'Olmi, regista de "Il mestiere delle armi"'
+}, {
+    'number': 9,
+    'h_clue': '-',
+    'v_clue': 'quando non si può avere, un bambino si...'
+}, {
+    'number': 11,
+    'h_clue': 'si usava per scrivere',
+    'v_clue': '-'
+}, {
+    'number': 20,
+    'h_clue': 'affermazione di Vladimir Putin',
+    'v_clue': '-'
+}, {
+    'number': 21,
+    'h_clue': '-',
+    'v_clue': 'l\'uomo bianco per cui Hitler simpatizzava'
+}, {
+    'number': 23,
+    'h_clue': 'in gergo: "trovata", "scovata"',
+    'v_clue': '-'
+}, {
+    'number': 30,
+    'h_clue': 'la banca della Santa Sede',
+    'v_clue': 'lo siamo "Noi"'
+}, {
+    'number': 33,
+    'h_clue': 'fu un corpo di polizia tedesca',
+    'v_clue': 'si distingue positivamente'
+}, {
+    'number': 36,
+    'h_clue': 'lo sono due che...si piacciono',
+    'v_clue': '-'
+}, {
+    'number': 40,
+    'h_clue': '-',
+    'v_clue': 'Ancona'
+}, {
+    'number': 44,
+    'h_clue': 'Pressione arteriosa diastolica',
+    'v_clue': '-'
+}, {
+    'number': 46,
+    'h_clue': '-',
+    'v_clue': 'fu presidente degli USA, iniziali'
+}, {
+    'number': 48,
+    'h_clue': 'una giornata in Campania',
+    'v_clue': '-'
+}, {
+    'number': 55,
+    'h_clue': 'quasi intatto',
+    'v_clue': '-'
+}, {
+    'number': 58,
+    'h_clue': '-',
+    'v_clue': 'anello di filo e comune lombardo'
+}, {
+    'number': 63,
+    'h_clue': 'un tipo di rete',
+    'v_clue': '-'
+}, {
+    'number': 66,
+    'h_clue': 'lo fu Marcello Lippi',
+    'v_clue': '-'
+}, {
+    'number': 69,
+    'h_clue': 'si usano per insaporire il brodo',
+    'v_clue': '-'
+}, {
+    'number': 71,
+    'h_clue': '-',
+    'v_clue': 'se non è "presa" è...'
+}, {
+    'number': 73,
+    'h_clue': '-',
+    'v_clue': 'anonimato che deriva dal Latino'
+}, {
+    'number': 77,
+    'h_clue': 'lingua slava poco diffusa',
+    'v_clue': '-'
+}, {
+    'number': 79,
+    'h_clue': '-',
+    'v_clue': 'l\'automobile che usava Wiston Churchill'
+}, {
+    'number': 84,
+    'h_clue': '"no" detto a Lisbona',
+    'v_clue': '-'
+}, {
+    'number': 86,
+    'h_clue': '-',
+    'v_clue': '"Organizzazione dei Nazionalisti Ucraini"'
+}, {
+    'number': 90,
+    'h_clue': 'ad alcuni puzza, ad altri sa di fresco...',
+    'v_clue': '-'
+}, {
+    'number': 92,
+    'h_clue': '-',
+    'v_clue': '"Istituto Magistrale"'
+}, {
+    'number': 94,
+    'h_clue': '-',
+    'v_clue': '"altrimenti" a Londra'
+}, {
+    'number': 96,
+    'h_clue': 'lo è "42", in breve',
+    'v_clue': '-'
+}, {
+    'number': 98,
+    'h_clue': '-',
+    'v_clue': 'sinonimo gergale di "adesso"'
+}, {
+    'number': 100,
+    'h_clue': 'è cantato come "campanaro"',
+    'v_clue': '-'
+}]
+
+cw_2 = { 'name': '2 - cinema', 'info': cw_1_info, 'sol': cw_1_sol, 'clues': cw_1_clues }
