@@ -31,9 +31,12 @@ resetAll = function() {
     missed = 0
     toWin = 0
     black_tiles = 0
+    currentOption = 'no_selection'
+    $('#check_btn').prop('disabled', true)
+    $('#reset_btn').prop('disabled', true)
     $('table').empty()
-    $('table').hide()
-    $("#remaing_letters").text(toWin)
+    $('table').hide(300)
+    $("#remaing_letters").text('')
     setDefaultClues()
 }
 
@@ -41,7 +44,9 @@ resetAll = function() {
 prepareSelection = function(selected) {
     resetAll()
     if (selected != 'no_selection') {
-        $('#' + selected).show()
+        $('#' + selected).fadeIn(400)
+        $('#check_btn').prop('disabled', false)
+        $('#reset_btn').prop('disabled', false)
         var cw = window[selected]
         currentOption = selected
 
@@ -192,7 +197,6 @@ checkLetters = function() {
 }
 
 resetBoard = function() {
-    $("#board_selection").val(currentOption)
     $("#remaing_letters").text(toWin)
     $(":input").val('')
     $(":input").removeAttr('style')
@@ -201,4 +205,5 @@ resetBoard = function() {
         index = (index + 1) % 110
     }
     $("#" + index).focus()
+    $("#board_selection").val(currentOption)
 }
