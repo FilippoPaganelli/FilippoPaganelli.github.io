@@ -1,3 +1,9 @@
+/*
+    Here, hide the solutions to the puzzles...
+    If you end up here it means you want to cheat...
+    Just know that I disapprove it :( but feel free to ruin your experience.
+*/
+
 // 1 - the first
 cw_1_sol = ["d", "i", "s", "p", "e", "r", "d", "e", "r", "a", "-", "c", "a", "l", "a", "m", "a", "i", "o", "-", "d", "a", "-", "n", "a", "s", "a", "t", "a", "-", "i", "o", "r", "s", "s", "-", "a", "t", "t", "r", "a", "t", "t", "i", "p", "a", "d", "-", "i", "o", "r", "n", "a", "t", "a", "i", "n", "t", "a", "t", "-", "e", "-", "l", "a", "n", "c", "t", "-", "s", "e", "d", "a", "n", "i", "-", "o", "c", "e", "c", "o", "-", "a", "-", "n", "a", "o", "-", "a", "-", "a", "l", "i", "t", "o", "-", "n", "u", "m", "-", "f", "r", "a", "m", "a", "r", "t", "i", "n", "o"]
 
