@@ -155,8 +155,8 @@ writeClue = function(num) {
     var elem = clues.find(obj => { return obj.number == num })
     var clue = ''
 
-    $("#clue_span_v").text('- - -')
-    $("#clue_span_h").text('- - -')
+    $("#clue_span_v").text('- -')
+    $("#clue_span_h").text('- -')
 
     if (elem.v_clue !== '-') {
         clue = elem.v_clue
