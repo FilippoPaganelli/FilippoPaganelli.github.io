@@ -3491,6 +3491,62 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff
 }
 
+
+/* ---------------------------------------- reset button*/
+
+.btn-reset {
+    color: #fff;
+    background-color: #942a2a;
+    border-color: #802525
+}
+
+.btn-reset:hover,
+.btn-reset:focus,
+.btn-reset.focus,
+.btn-reset:active,
+.btn-reset.active,
+.open>.dropdown-toggle.btn-reset {
+    color: #fff;
+    background-color: #792424;
+    border-color: #702020
+}
+
+.btn-reset:active,
+.btn-reset.active,
+.open>.dropdown-toggle.btn-reset {
+    background-image: none
+}
+
+.btn-reset.disabled,
+.btn-reset[disabled],
+fieldset[disabled] .btn-reset,
+.btn-reset.disabled:hover,
+.btn-reset[disabled]:hover,
+fieldset[disabled] .btn-reset:hover,
+.btn-reset.disabled:focus,
+.btn-reset[disabled]:focus,
+fieldset[disabled] .btn-reset:focus,
+.btn-reset.disabled.focus,
+.btn-reset[disabled].focus,
+fieldset[disabled] .btn-reset.focus,
+.btn-reset.disabled:active,
+.btn-reset[disabled]:active,
+fieldset[disabled] .btn-reset:active,
+.btn-reset.disabled.active,
+.btn-reset[disabled].active,
+fieldset[disabled] .btn-reset.active {
+    background-color: #337ab7;
+    border-color: #2e6da4
+}
+
+.btn-reset .badge {
+    color: #802525;
+    background-color: #fff
+}
+
+
+/* ------------------------------------------------ */
+
 .btn-success {
     color: #fff;
     background-color: #5cb85c;
