@@ -3535,8 +3535,8 @@ fieldset[disabled] .btn-reset:active,
 .btn-reset.disabled.active,
 .btn-reset[disabled].active,
 fieldset[disabled] .btn-reset.active {
-    background-color: #337ab7;
-    border-color: #2e6da4
+    background-color: #942a2a;
+    border-color: #802525
 }
 
 .btn-reset .badge {
