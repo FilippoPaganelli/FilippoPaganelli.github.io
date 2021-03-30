@@ -1,7 +1,8 @@
 var ROWS = 0
 var COLS = 0
 var TOTAL_CELLS = 0
-const DEFAULT_CLUE = '< click on a cell to show clue >'
+const DEFAULT_CLUE = '- click on a cell to show clue -'
+const DEFAULT_CLUE_EMPTY = '- no crossword selected -'
 var currentOption = 'no_selection'
 var solutions = []
 var clues = []
@@ -36,7 +37,7 @@ resetAll = function() {
     $('#reset_btn').prop('disabled', true)
     $('table').empty()
     $('table').hide(300)
-    $("#remaing_letters").text('')
+    $("#remaing_letters").text('- -')
     setDefaultClues()
 }
 
@@ -168,8 +169,13 @@ writeClue = function(num) {
 }
 
 setDefaultClues = function() {
-    $("#clue_span_v").text(DEFAULT_CLUE)
-    $("#clue_span_h").text(DEFAULT_CLUE)
+    if (currentOption != 'no_selection') {
+        $("#clue_span_v").text(DEFAULT_CLUE)
+        $("#clue_span_h").text(DEFAULT_CLUE)
+    } else {
+        $("#clue_span_v").text(DEFAULT_CLUE_EMPTY)
+        $("#clue_span_h").text(DEFAULT_CLUE_EMPTY)
+    }
 }
 
 checkLetters = function() {
