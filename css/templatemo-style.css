@@ -383,7 +383,7 @@ hr {
 }
 
 .top-section {
-    padding: 40px;
+    padding: 30px;
 }
 
 .profile-image {
@@ -464,6 +464,7 @@ h3.profile-title {
     .responsive-header .main-navigation {
         margin-top: 0px;
         display: block;
+        margin: 5px;
     }
 }
 
@@ -478,10 +479,11 @@ h3.profile-title {
         float: left;
         width: 110px;
         height: 110px;
-        -webkit-border-radius: 50px;
-        border-radius: 5px;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
         overflow: hidden;
-        margin-right: 30px;
+        margin-right: 25px;
+        margin-left: 20px;
     }
     .responsive-header .profile-content {
         text-align: left;
@@ -493,6 +495,9 @@ h3.profile-title {
 @media screen and (max-width: 992px) {
     .top-section {
         padding-bottom: 0;
+    }
+    .profile-image {
+        padding: 0px;
     }
 }
 
