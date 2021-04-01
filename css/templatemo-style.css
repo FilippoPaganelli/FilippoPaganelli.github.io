@@ -391,6 +391,7 @@ hr {
     height: 150px;
     overflow: visible;
     margin-bottom: 25px;
+    border: ridge 3px #1d3664;
 }
 
 .profile-image img {
@@ -416,7 +417,7 @@ h3.profile-title {
     padding: 15px 40px;
     display: block;
     color: white;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .main-navigation li a i {
@@ -464,7 +465,9 @@ h3.profile-title {
     .responsive-header .main-navigation {
         margin-top: 0px;
         display: block;
-        margin: 5px;
+        margin-bottom: 12px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 }
 
@@ -498,6 +501,16 @@ h3.profile-title {
     }
     .profile-image {
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-navigation ul {}
+    .main-navigation li a {
+        padding: 12px 0px;
+        display: block;
+        color: white;
+        font-size: 15px;
     }
 }
 
