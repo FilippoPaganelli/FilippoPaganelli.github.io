@@ -6,7 +6,7 @@
 - my main contacts
 
 
-### Crossword playground project:
+### Crossword playground project: [page here](https://filippopaganelli.github.io/crosswords.html)
 
 This project is specific of this website, it's listed in [my projects](https://filippopaganelli.github.io/projects.html) page. 
 
