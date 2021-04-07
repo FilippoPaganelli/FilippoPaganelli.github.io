@@ -1,4 +1,4 @@
-## This is my website, [there](https://filippopaganelli.github.io/) you can find:
+## This is my personal website, [there](https://filippopaganelli.github.io/) you can find:
 
 - a very short bio
 - my education timeline
