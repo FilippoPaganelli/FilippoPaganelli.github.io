@@ -68,7 +68,7 @@ cw_1_clues = [{
 }, {
     'number': 33,
     'h_clue': 'fu un corpo di polizia tedesca',
-    'v_clue': 'uno che si distingue positivamente, si dice che si __'
+    'v_clue': 'uno che si distingue positivamente, si dice che __'
 }, {
     'number': 36,
     'h_clue': 'lo sono due che...si piacciono',
