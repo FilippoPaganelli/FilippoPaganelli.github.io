@@ -1,9 +1,9 @@
 ## This is my personal website, [there](https://filippopaganelli.github.io/) you can find:
 
-- a very short bio
-- my education timeline
+- short bio
+- education timeline
 - some of my projects
-- my main contacts
+- main contacts
 
 
 ### Crossword playground project: [page here](https://filippopaganelli.github.io/crosswords.html)
