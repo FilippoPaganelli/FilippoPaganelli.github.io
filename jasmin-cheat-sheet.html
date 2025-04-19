@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasmin Cheat Sheet</title>
+  </head>
+
+  <body>
+    <div class="list">
+      <div class="welcome">
+        <span>Welcome to Jasmin's cheat sheet :)</span>
+        <span style="text-align: end">... your keyboard secrets unveiled!</span>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">Shift</span>
+          +
+          <span class="key">Esc</span>
+        </div>
+        <div class="description">Open the activity monitor</div>
+        <svg width="100" height="30">
+          <use href="#windows-badge" />
+        </svg>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">+⁄-</span>
+        </div>
+        <div class="description">Zoom in/out in many places</div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Alt</span>
+          +
+          <span class="key">Tab</span>
+        </div>
+        <div class="description">Cycle between open windows (apps)</div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">C</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">terminal</span> Stop a running command
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">Shift</span>
+          +
+          <span class="key">C⁄V</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">terminal</span> Copy/paste text
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">⊞ Win</span>
+          +
+          <span class="key">Space</span>
+        </div>
+        <div class="description">Switch to another keyboard layout</div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">⊞ Win</span>
+          +
+          <span class="key">L</span>
+        </div>
+        <div class="description">Log out and lock your laptop</div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">⊞ Win</span>
+          +
+          <span class="key">↑⁄↓⁄←⁄→</span>
+        </div>
+        <div class="description">Resize/move current window</div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">T</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">browser</span> Open a new tab
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">W</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">browser</span> Close the current tab
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">Tab</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">browser</span> Cycle between the open tabs
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">Shift</span>
+          +
+          <span class="key">Tab</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">browser</span> ↑ Same but from right to left
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">←⁄→</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">editor</span> Move the cursor by one word
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">S</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">editor</span> Save current file
+        </div>
+      </div>
+    </div>
+
+    <!-- svg for the Windows OS badge -->
+    <svg style="display: none">
+      <symbol id="windows-badge" viewBox="0 0 86 20">
+        <title>OS: Windows</title>
+        <linearGradient id="windows-s" x2="0" y2="100%">
+          <stop offset="0" stop-color="#bbb" stop-opacity=".1" />
+          <stop offset="1" stop-opacity=".1" />
+        </linearGradient>
+        <clipPath id="windows-r">
+          <rect width="86" height="20" rx="3" fill="#fff" />
+        </clipPath>
+        <g clip-path="url(#windows-r)">
+          <rect width="27" height="20" fill="#555" />
+          <rect x="27" width="59" height="20" fill="#007ec6" />
+          <rect width="86" height="20" fill="url(#windows-s)" />
+        </g>
+        <g
+          fill="#fff"
+          text-anchor="middle"
+          font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+          text-rendering="geometricPrecision"
+          font-size="110"
+        >
+          <text
+            aria-hidden="true"
+            x="145"
+            y="150"
+            fill="#010101"
+            fill-opacity=".3"
+            transform="scale(.1)"
+            textLength="170"
+          >
+            OS
+          </text>
+          <text
+            x="145"
+            y="140"
+            transform="scale(.1)"
+            fill="#fff"
+            textLength="170"
+          >
+            OS
+          </text>
+          <text
+            aria-hidden="true"
+            x="555"
+            y="150"
+            fill="#010101"
+            fill-opacity=".3"
+            transform="scale(.1)"
+            textLength="490"
+          >
+            Windows
+          </text>
+          <text
+            x="555"
+            y="140"
+            transform="scale(.1)"
+            fill="#fff"
+            textLength="490"
+          >
+            Windows
+          </text>
+        </g>
+      </symbol>
+    </svg>
+  </body>
+
+  <!-- script to allow to copy to clipboard when clicking on a combo -->
+  <script>
+    function copyToClipboard(event) {
+      const keys = Array.from(event.currentTarget.querySelectorAll(".key"))
+        .map((key) => key.innerText)
+        .join(" + ");
+      const description =
+        event.currentTarget.querySelector(".description").innerText;
+
+      const text = `${keys} => ${description}`;
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).catch((err) => console.error(err));
+        alert(`"${text}"\n\nCopied to clipboard!`);
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: rgb(205, 192, 218);
+      font-size: 175%;
+      font-family: monospace;
+    }
+    .welcome {
+      color: white;
+      background-color: #e32ba9df;
+      font-weight: bold;
+      border-radius: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .combo {
+      cursor: pointer;
+      display: grid;
+      gap: 10px;
+      align-items: center;
+      column-gap: 50px;
+      grid-template-columns: 3fr 5fr 1fr;
+      padding: 10px;
+      border: 1px solid rgba(76, 23, 126, 0.2);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: background-color 0.4s ease, color 0.4s ease,
+        border-color 0.4s ease, color 0.4s ease, color 0.4s ease,
+        color 0.4s ease;
+    }
+    .combo:hover {
+      background-color: #e32ba9df;
+      border-color: #e32ba9df;
+      color: white;
+    }
+    .combo:hover .key {
+      background-color: white;
+      color: blueviolet;
+      border-color: white;
+      color: black;
+    }
+
+    .combo-tag {
+      color: black;
+      background-color: #bdbdbd;
+      border-radius: 4px;
+      padding: 0px 4px 0px 4px;
+    }
+
+    .keys {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+    }
+    .key {
+      border: 1px solid rgb(76, 23, 126);
+      padding: 0px 6px;
+      border-radius: 4px;
+      background-color: blueviolet;
+      color: white;
+      font-family: monospace;
+      font-size: 100%;
+    }
+    .description {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  </style>
+</html>
