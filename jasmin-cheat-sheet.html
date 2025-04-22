@@ -52,7 +52,7 @@
           <span class="key">C</span>
         </div>
         <div class="description">
-          <span class="combo-tag">terminal</span> Stop a running command
+          <span class="combo-tag">👩🏼‍💻 terminal</span> Stop a running command
         </div>
       </div>
 
@@ -65,7 +65,7 @@
           <span class="key">C⁄V</span>
         </div>
         <div class="description">
-          <span class="combo-tag">terminal</span> Copy/paste text
+          <span class="combo-tag">👩🏼‍💻 terminal</span> Copy/paste text
         </div>
       </div>
 
@@ -103,7 +103,7 @@
           <span class="key">T</span>
         </div>
         <div class="description">
-          <span class="combo-tag">browser</span> Open a new tab
+          <span class="combo-tag">🌐 browser</span> Open a new tab
         </div>
       </div>
 
@@ -114,7 +114,19 @@
           <span class="key">W</span>
         </div>
         <div class="description">
-          <span class="combo-tag">browser</span> Close the current tab
+          <span class="combo-tag">🌐 browser</span> Close the current tab
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">L</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">🌐 browser</span> Go to the address bar (type
+          something new)
         </div>
       </div>
 
@@ -125,7 +137,7 @@
           <span class="key">Tab</span>
         </div>
         <div class="description">
-          <span class="combo-tag">browser</span> Cycle between the open tabs
+          <span class="combo-tag">🌐 browser</span> Cycle between the open tabs
         </div>
       </div>
 
@@ -138,8 +150,18 @@
           <span class="key">Tab</span>
         </div>
         <div class="description">
-          <span class="combo-tag">browser</span> ↑ Same but from right to left
+          <span class="combo-tag">🌐 browser</span> ↑ Same but from right to
+          left
         </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">F</span>
+        </div>
+        <div class="description">Search in file/page/etc.</div>
       </div>
 
       <div class="combo" onclick="copyToClipboard(event)">
@@ -149,7 +171,7 @@
           <span class="key">←⁄→</span>
         </div>
         <div class="description">
-          <span class="combo-tag">editor</span> Move the cursor by one word
+          <span class="combo-tag">📄 editor</span> Move the cursor by one word
         </div>
       </div>
 
@@ -160,7 +182,33 @@
           <span class="key">S</span>
         </div>
         <div class="description">
-          <span class="combo-tag">editor</span> Save current file
+          <span class="combo-tag">📄 editor</span> Save current file
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">Shift</span>
+          +
+          <span class="key">S</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag">📄 editor</span> Save current file with a
+          specific name
+        </div>
+      </div>
+
+      <div class="combo" onclick="copyToClipboard(event)">
+        <div class="keys">
+          <span class="key">Ctrl</span>
+          +
+          <span class="key">B</span>
+        </div>
+        <div class="description">
+          <span class="combo-tag"><img src="assets/vscode.png" />vscode</span>
+          Open/close the menu on the left
         </div>
       </div>
     </div>
@@ -239,8 +287,9 @@
       const keys = Array.from(event.currentTarget.querySelectorAll(".key"))
         .map((key) => key.innerText)
         .join(" + ");
-      const description =
-        event.currentTarget.querySelector(".description").innerText;
+      const description = event.currentTarget
+        .querySelector(".description")
+        .innerText.replace("\n", " | ");
 
       const text = `${keys} => ${description}`;
 
@@ -256,13 +305,31 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 20px;
-      background-color: rgb(205, 192, 218);
-      font-size: 175%;
+      font-size: 160%;
       font-family: monospace;
+      background-color: rgb(205, 192, 218);
+      position: relative;
+      min-height: 100vh;
+      margin: 20px;
+      overflow-x: hidden;
     }
+
+    body::before {
+      background-image: url("assets/phages.png");
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
     .welcome {
       color: white;
-      background-color: #e32ba9df;
+      background-color: #e32ba9;
       font-weight: bold;
       border-radius: 8px;
       padding-top: 20px;
@@ -275,8 +342,8 @@
     .list {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      max-width: 1100px;
+      gap: 10px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     .combo {
@@ -284,19 +351,19 @@
       display: grid;
       gap: 10px;
       align-items: center;
-      column-gap: 50px;
-      grid-template-columns: 3fr 5fr 1fr;
-      padding: 10px;
+      column-gap: 40px;
+      grid-template-columns: 4fr 12fr 1fr;
+      padding: 15px;
       border: 1px solid rgba(76, 23, 126, 0.2);
       border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.504);
       transition: background-color 0.4s ease, color 0.4s ease,
         border-color 0.4s ease, color 0.4s ease, color 0.4s ease,
         color 0.4s ease;
     }
     .combo:hover {
-      background-color: #e32ba9df;
-      border-color: #e32ba9df;
+      background-color: #e32ba9;
+      border-color: #e32ba9;
       color: white;
     }
     .combo:hover .key {
@@ -307,10 +374,21 @@
     }
 
     .combo-tag {
+      display: flex;
       color: black;
       background-color: #bdbdbd;
       border-radius: 4px;
       padding: 0px 4px 0px 4px;
+      align-items: center;
+    }
+    .combo-tag img {
+      height: 22px;
+      width: 22px;
+      display: inline-block;
+      object-fit: contain;
+      vertical-align: middle;
+      margin: 0;
+      padding-right: 12px;
     }
 
     .keys {
